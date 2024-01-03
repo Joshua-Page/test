@@ -1,0 +1,3 @@
+- Add blog CSS
+- Change all meta data
+- Image optimization (images plugin)

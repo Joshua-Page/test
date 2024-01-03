@@ -1,0 +1,62 @@
+---
+layout: 'base.html'
+description: 'Meta description for the page'
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Blog'
+preloadCSS: '/css/global.css'
+permalink: 'blog/'
+eleventyNavigation:
+    key: Blog
+    order: 500
+---
+
+<!-- Enter html code below -->
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Blog</h1>
+</section>
+
+<section class="blog-section">
+<!-- ============================================ -->
+<!--              Main Blog Content               -->
+<!-- ============================================ -->
+
+<div class="blog-container main-content-wrapper article-container">
+    <!--Main content -->
+    <div class="main-content">
+        <!-- ============================================ -->
+        <!--                 Blog Articles                -->
+        <!-- ============================================ -->
+
+        {% if collections.post | length == 0 %}
+            <h1>No Recent Posts</h1>
+        {% endif %}
+        {%- for post in collections.post | reverse -%}
+            <article class="recent-articles article-container">
+                <!--Main Article Image-->
+    
+                        <span class="blog-author">{{ post.data.author }}</span>
+                        <span aria-hidden="true" class="blog-dot"></span>
+                        <!--Blog Date-->
+                        {# <span class="blog-date">{{ post.date | postDate }}</span> #}
+                    </div>
+                    <h2 class="blog-h1">
+                        {{ post.data.blogTitle }}
+                    </h2>
+                    <p class="blog-desc">
+                        {{ post.data.blogDescription }}
+                    </p>
+                    <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+                </div>
+            </article>
+        {%- endfor -%}
+    </div>
+
+    <!-- ============================================ -->
+    <!--                Featured Posts                -->
+    <!-- ============================================ -->
+</div>
+</section>

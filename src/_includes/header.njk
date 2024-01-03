@@ -1,0 +1,44 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+<link rel="stylesheet" href="{{ '/css/global.css' }}" />
+
+<!--Main Nav-->
+<div class="navigation-container">
+    {# Logo #}
+    <a class="logo" aria-label="click to go to home page" href="/">
+        <img aria-hidden="true" src="/assets/images/logo.png" decoding="async" alt="logo" height="66">
+    </a>
+
+    {# Burger container #}
+    <div class="burger-div">
+        <label for="check">
+        <input type="checkbox" id="check" class="burger-input"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+    </div>
+
+    <nav class="desktop-navigation" id="desktop-navbar-menu" aria-label="main navigation for desktop">
+        <menu class="desktop-menu">
+            {%- for entry in navPages %}
+                <li{% if entry.url == page.url %} class="active-page-navigation"{% endif %}>
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </li>
+            {%- endfor %}
+        </menu>
+    </nav>
+</div>
+
+<nav class="mobile-navigation">
+    <menu class="mobile-menu">
+        {%- for entry in navPages %}
+            <li{% if entry.url == page.url %} class="active-page-navigation"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {%- endfor %}
+    </menu>
+</nav>
+
+<script src="/assets/js/nav.js"></script>
+

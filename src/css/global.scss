@@ -1,0 +1,42 @@
+// Imports
+@import "reset.scss";
+@import "header.scss";
+@import "burger_animation.scss";
+@import "blog_home.scss";
+
+$font: 'Overpass', Arial, sans-serif;
+
+
+/* overpass-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/overpass-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/overpass-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/overpass-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/assets/fonts/overpass-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/overpass-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/overpass-v12-latin-regular.svg#Overpass') format('svg'); /* Legacy iOS */
+  }
+  /* overpass-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/overpass-v12-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/overpass-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/overpass-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/assets/fonts/overpass-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/overpass-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/overpass-v12-latin-700.svg#Overpass') format('svg'); /* Legacy iOS */
+  }
+
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+body {
+    font-family: $font;
+}

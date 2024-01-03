@@ -1,0 +1,14 @@
+.main-content-wrapper, .recent-articles {
+    background-color: rgb(231, 231, 231);
+    margin: 20px;
+}
+
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    max-width: 60rem;
+}
+
+.article-container:first-child {
+    grid-column: 1 / -1;
+  }

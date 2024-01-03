@@ -1,0 +1,30 @@
+---
+layout: base.html
+title: index
+description: 'Meta description for the page'
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Pixel Perfect Websites'
+preloadImg: '/images/landing-1920w.webp'
+preloadCSS: '/css/global.css'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window
+      .netlifyIdentity
+      .on('init', (user) => {
+        if (!user) {
+          window
+            .netlifyIdentity
+            .on('login', () => {
+              document.location.href = '/admin/';
+            });
+        }
+      });
+  }
+</script>

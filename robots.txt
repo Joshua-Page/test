@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://eleventy-skeleton-josh.netlify.app/sitemap.xml
